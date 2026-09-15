@@ -1,6 +1,5 @@
 public class Libro {
     
-    // Atributos privados (Encapsulamiento)
     private String titulo;
     private String autor;
     private boolean disponible;
