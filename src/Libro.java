@@ -4,13 +4,22 @@ public class Libro {
     private String autor;
     private boolean disponible;
 
+    public Libro() {
+    }
+
+    public Libro(String titulo, String autor, boolean disponible) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.disponible = disponible;
+    }
+
     public String getTitulo() {
         return titulo;
     }
 
     public void setTitulo(String titulo) {
         if (titulo.equals("")) {
-            System.out.println("Error: El título no puede estar vacío.");
+            System.out.println("Error: El titulo no puede estar vacio.");
         } else {
             this.titulo = titulo;
         }
@@ -33,8 +42,8 @@ public class Libro {
     }
 
     public void mostrarInfo() {
-        System.out.println("----- INFORMACIÓN DEL LIBRO -----");
-        System.out.println("Título: " + titulo);
+        System.out.println("----- INFORMACION DEL LIBRO -----");
+        System.out.println("Titulo: " + titulo);
         System.out.println("Autor: " + autor);
         if (disponible) {
             System.out.println("Estado: Disponible");
@@ -49,7 +58,7 @@ public class Libro {
             disponible = false;
             System.out.println("Has prestado el libro: " + titulo);
         } else {
-            System.out.println("El libro '" + titulo + "' ya está prestado, no se puede prestar.");
+            System.out.println("El libro '" + titulo + "' ya esta prestado, no se puede prestar.");
         }
     }
 
